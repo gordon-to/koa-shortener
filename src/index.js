@@ -7,6 +7,8 @@ import BodyParser from 'koa-bodyparser';
 const app = new Koa();
 const router = Router();
 
+const fourohfour = 'http://danwoodger.com/404';
+
 const makeHash = () => {
     let strLength =  5;
     let charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -36,7 +38,7 @@ const hashResponse = async (ctx, next) => {
     ctx.status = 301;
   } catch(err) {
     console.err(err);
-    ctx.redirect('https://strategiccoahc.com/404');
+    ctx.redirect(fourohfour);
     ctx.status = 404;
     
   }
