@@ -4,7 +4,7 @@
   "description": "create short urls",
   "main": "index.js",
   "repository": {
-    "url": "git@code.strategiccoach.com:online-tools/shortener.git",
+    "url": "https://github.com/xmrwhite/koa-shortener",
     "type": "git"
   },
   "scripts": {
@@ -12,7 +12,8 @@
     "prestart": "npm run build",
     "start": "node dist/index.js",
     "test": "nyc ava",
-    "report": "nyc report --reporter=html"
+    "report": "nyc report --reporter=html",
+    "report-coverage": "nyc report --reporter=lcov | codecov"
   },
   "ava": {
     "require": [
@@ -31,13 +32,14 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-register": "^6.18.0",
     "babel-types": "^6.19.0",
+    "codecov.io": "^0.1.6",
     "eslint": "^3.10.2",
     "nyc": "^9.0.1",
     "supertest": "^2.0.1",
-    "supertest-as-promised": "^4.0.2",
-    "babel-plugin-transform-async-to-generator": "^6.16.0",
-    "babel-register": "^6.18.0"
+    "supertest-as-promised": "^4.0.2"
   }
 }

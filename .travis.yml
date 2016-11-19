@@ -2,4 +2,5 @@ language: node_js
 node_js:
   "7"
 after_success:
+  - npm run report-coverage
   - bash <(curl -s https://codecov.io/bash)
