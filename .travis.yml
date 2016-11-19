@@ -4,3 +4,7 @@ node_js:
 after_success:
   - npm run report-coverage
   - bash <(curl -s https://codecov.io/bash)
+
+addons:
+    code_climate:
+        repo_token: 4d68a802b3baddfaa4a9eda003cddc7649e7aa20aa1cbac06281162bd2c81985
