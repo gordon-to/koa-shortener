@@ -2,5 +2,11 @@
   "plugins" : [
     "transform-async-to-generator",
     "transform-es2015-modules-commonjs"
-  ]
+  ],
+  "ignore": "test.js",
+  "env": {
+    "development": {
+      "sourceMaps": "inline"
+    }
+  }
 }

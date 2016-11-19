@@ -10,13 +10,18 @@
   "scripts": {
     "build": "babel src -d dist",
     "prestart": "npm run build",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "nyc ava",
+    "report": "nyc report --reporter=html"
+  },
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ]
   },
   "author": "Adam Gordon",
   "license": "MIT",
   "dependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.16.0",
-    "babel-register": "^6.18.0",
     "koa": "next",
     "koa-bodyparser": "next",
     "koa-router": "next",
@@ -24,8 +29,15 @@
     "sequelize": "^3.27.0"
   },
   "devDependencies": {
+    "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
-    "babel-types": "^6.19.0"
+    "babel-types": "^6.19.0",
+    "eslint": "^3.10.2",
+    "nyc": "^9.0.1",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.2",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-register": "^6.18.0"
   }
 }
