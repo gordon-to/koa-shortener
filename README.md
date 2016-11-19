@@ -1,7 +1,8 @@
 # koa-shortener
 
-[![Build Status](https://img.shields.io/travis/xMrWhite/koa-shortener.svg)]
-[![codecov](https://img.shields.io/codecov/c/github/xMrWhite/koa-shortener.svg)]
+![Build Status](https://img.shields.io/travis/xMrWhite/koa-shortener.svg)
+![codecov](https://img.shields.io/codecov/c/github/xMrWhite/koa-shortener.svg)
+![codeclimate](https://img.shields.io/codeclimate/github/xMrWhite/koa-shortener.svg)
 
 run with npm start
 
